@@ -1,0 +1,12 @@
+# Ignore byte-compiled Python code
+*.py[cod]
+
+# Ignore pre-compiled dynamic libraries
+*.so
+*.dll
+
+# Ignore directories created during the build/installation process
+*.egg-info/
+build/
+dist/
+bazel-out
