@@ -28,12 +28,6 @@ cc_library(
             "include/pybind11/eigen.h",
         ],
     ),
-    copts = [
-        "-fexceptions",
-        "-Xclang-only=-Wno-undefined-inline",
-        "-Xclang-only=-Wno-pragma-once-outside-header",
-        "-Xgcc-only=-Wno-error",
-    ],
     includes = ["include"],
     visibility = ["//visibility:public"],
     deps = ["@python_headers"],
