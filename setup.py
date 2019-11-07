@@ -30,7 +30,7 @@ from distutils import sysconfig
 import setuptools
 from setuptools.command import build_ext
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 PROJECT_NAME = 'labmaze'
 
