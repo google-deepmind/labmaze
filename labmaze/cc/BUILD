@@ -24,7 +24,7 @@ licenses(["notice"])  # Apache 2.0 License
 cc_library(
     name = "defaults",
     hdrs = ["defaults.h"],
-    visibility = ["@//labmaze/cc/python:__pkg__"],
+    visibility = ["//labmaze/cc/python:__pkg__"],
 )
 
 cc_library(
@@ -93,7 +93,7 @@ cc_library(
     name = "random_maze",
     srcs = ["random_maze.cc"],
     hdrs = ["random_maze.h"],
-    visibility = ["@//labmaze/cc/python:__pkg__"],
+    visibility = ["//labmaze/cc/python:__pkg__"],
     deps = [
         ":algorithm",
         ":text_maze",
