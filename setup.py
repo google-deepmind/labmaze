@@ -30,13 +30,13 @@ from distutils import sysconfig
 import setuptools
 from setuptools.command import build_ext
 
-__version__ = '1.0.2'
+__version__ = '1.0.3'
 
 PROJECT_NAME = 'labmaze'
 
 REQUIRED_PACKAGES = [
     'absl-py',
-    'numpy>=1.8.0rc1',
+    'numpy>=1.8.0',
     'six>=1.4.1',
 ]
 
