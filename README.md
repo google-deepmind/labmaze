@@ -22,8 +22,8 @@ this GitHub repository.
 ## Installation from PyPI
 
 LabMaze contains C++ code that first needs to be compiled into a Python
-extension. For Python 2.7, 3.5, 3.6, and 3.7 on x64 Linux, macOS, and Windows,
-we provide
+extension. For Python 2.7, 3.5, 3.6, 3.7, and 3.8 on x64 Linux, macOS, and
+Windows, we provide
 [built distributions (bdist)](https://packaging.python.org/glossary/#term-built-distribution)
 that can be straightforwardly installed via:
 
