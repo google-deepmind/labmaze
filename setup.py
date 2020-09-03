@@ -37,6 +37,7 @@ PROJECT_NAME = 'labmaze'
 REQUIRED_PACKAGES = [
     'absl-py',
     'numpy>=1.8.0',
+    'setuptools!=50.0.0',  # https://github.com/pypa/setuptools/issues/2350
     'six>=1.4.1',
 ]
 
