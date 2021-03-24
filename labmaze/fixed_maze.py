@@ -15,16 +15,11 @@
 
 """Text mazes with a fixed, prespecified layout."""
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import itertools
 from labmaze import base
 from labmaze import defaults
 from labmaze import text_grid
 import numpy as np
-from six.moves import range
 
 _EMPTY_CELL = ' '
 

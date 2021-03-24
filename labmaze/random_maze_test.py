@@ -15,16 +15,11 @@
 
 """Tests for labmaze.RandomMaze."""
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 import copy
 
 from absl.testing import absltest
 import labmaze
 import numpy as np
-from six.moves import range
 
 
 class RandomMazeTest(absltest.TestCase):

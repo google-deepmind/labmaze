@@ -15,10 +15,6 @@
 
 """Randomly generated text mazes."""
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
 from labmaze import base
 from labmaze import defaults
 from labmaze import text_grid

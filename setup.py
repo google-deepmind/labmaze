@@ -15,10 +15,7 @@
 
 """Install script for setuptools."""
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-
+from distutils import sysconfig
 import fnmatch
 import os
 import posixpath
@@ -26,11 +23,10 @@ import re
 import shutil
 import sys
 
-from distutils import sysconfig
 import setuptools
 from setuptools.command import build_ext
 
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 PROJECT_NAME = 'labmaze'
 
