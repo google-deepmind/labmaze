@@ -55,8 +55,8 @@ new_local_repository(
 # (https://docs.bazel.build/versions/master/external.html#transitive-dependencies)
 http_archive(
     name = "rules_cc",
-    strip_prefix = "rules_cc-master",
-    urls = ["https://github.com/bazelbuild/rules_cc/archive/master.zip"],
+    strip_prefix = "rules_cc-main",
+    urls = ["https://github.com/bazelbuild/rules_cc/archive/main.zip"],
 )
 
 load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
