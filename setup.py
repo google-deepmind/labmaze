@@ -26,7 +26,7 @@ import sys
 import setuptools
 from setuptools.command import build_ext
 
-__version__ = '1.0.4'
+__version__ = '1.0.5'
 
 PROJECT_NAME = 'labmaze'
 
@@ -34,7 +34,6 @@ REQUIRED_PACKAGES = [
     'absl-py',
     'numpy>=1.8.0',
     'setuptools!=50.0.0',  # https://github.com/pypa/setuptools/issues/2350
-    'six>=1.4.1',
 ]
 
 WORKSPACE_PYTHON_HEADERS_PATTERN = re.compile(
