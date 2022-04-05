@@ -19,34 +19,36 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_skylib",
-    strip_prefix = "bazel-skylib-0.9.0",
-    url = "https://github.com/bazelbuild/bazel-skylib/archive/0.9.0.zip",
-    sha256 = "a8677c64e2a58eb113f305784e6af9759cfa3f9a6eacb4d40531fe1bd6356aca",
+    sha256 = "e8cedbf5f7572bdb01f7359baa4b874128c1f4089b42d9735aa4dbc59df73846",
+    strip_prefix = "bazel-skylib-1.2.1",
+    url = "https://github.com/bazelbuild/bazel-skylib/archive/1.2.1.zip",
 )
 
 http_archive(
     name = "com_google_absl",
-    strip_prefix = "abseil-cpp-master",
-    urls = ["https://github.com/abseil/abseil-cpp/archive/master.zip"],
+    sha256 = "a4567ff02faca671b95e31d315bab18b42b6c6f1a60e91c6ea84e5a2142112c2",
+    strip_prefix = "abseil-cpp-20211102.0",
+    url = "https://github.com/abseil/abseil-cpp/archive/20211102.0.zip",
 )
 
 http_archive(
     name = "com_google_googletest",
-    strip_prefix = "googletest-master",
-    urls = ["https://github.com/google/googletest/archive/master.zip"],
+    sha256 = "353571c2440176ded91c2de6d6cd88ddd41401d14692ec1f99e35d013feda55a",
+    strip_prefix = "googletest-release-1.11.0",
+    url = "https://github.com/google/googletest/archive/release-1.11.0.zip",
 )
 
 http_archive(
     name = "pybind11",
     build_file = "@//bazel:pybind11.BUILD",
-    sha256 = "1f844c071d9d98f5bb08458f128baa0aa08a9e5939a6b42276adb1bacd8b483e",
-    strip_prefix = "pybind11-2.3.0",
-    url = "https://github.com/pybind/pybind11/archive/v2.3.0.zip",
+    sha256 = "d1646e6f70d8a3acb2ddd85ce1ed543b5dd579c68b8fb8e9638282af20edead8",
+    strip_prefix = "pybind11-2.9.2",
+    url = "https://github.com/pybind/pybind11/archive/v2.9.2.zip",
 )
 
 new_local_repository(
     name = "python_headers",
-    path = "/usr/include/python2.7",  # May be overwritten by setup.py.
+    path = "/usr/include/python3.7",  # May be overwritten by setup.py.
     build_file = "@//bazel:python_headers.BUILD"
 )
 

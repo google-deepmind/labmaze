@@ -15,13 +15,14 @@
 
 """Install script for setuptools."""
 
-from distutils import sysconfig
+import distutils.sysconfig
 import fnmatch
 import os
 import posixpath
 import re
 import shutil
 import sys
+import sysconfig
 
 import setuptools
 from setuptools.command import build_ext
@@ -68,7 +69,8 @@ class BuildBazelExtension(build_ext.build_ext):
 
     with open('WORKSPACE', 'w') as f:
       f.write(WORKSPACE_PYTHON_HEADERS_PATTERN.sub(
-          sysconfig.get_python_inc().replace(os.path.sep, posixpath.sep),
+          distutils.sysconfig.get_python_inc().replace(os.path.sep,
+                                                       posixpath.sep),
           workspace_contents))
 
     if not os.path.exists(self.build_temp):
@@ -85,6 +87,9 @@ class BuildBazelExtension(build_ext.build_ext):
     if IS_WINDOWS:
       for library_dir in self.library_dirs:
         bazel_argv.append('--linkopt=/LIBPATH:' + library_dir)
+      # TODO(stunya): Figure out why we need this.
+      if sysconfig.get_python_version() == '3.7':
+        bazel_argv.append('--linkopt=/LIBPATH:C:\\Python37\\Libs')
 
     self.spawn(bazel_argv)
 
