@@ -17,8 +17,6 @@
 #   C++ components for LabMaze. Intended for internal usage only.
 #   Please use the Python API provided directly under the LabMaze package.
 
-# DO NOT REMOVE THIS LINE -- COPYBARA: load("@google_internal", "cc_hermetic_test")
-
 licenses(["notice"])  # Apache 2.0 License
 
 cc_library(
