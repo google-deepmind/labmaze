@@ -17,7 +17,7 @@
 #   C++ components for LabMaze. Intended for internal usage only.
 #   Please use the Python API provided directly under the LabMaze package.
 
-licenses(["notice"])  # Apache 2.0 License
+licenses(["notice"])
 
 cc_library(
     name = "defaults",

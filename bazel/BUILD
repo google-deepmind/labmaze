@@ -20,7 +20,7 @@ package(
     default_visibility = ["@//:__subpackages__"],
 )
 
-licenses(["notice"])  # Apache 2.0 License
+licenses(["notice"])
 
 config_setting(
     name = "linux",

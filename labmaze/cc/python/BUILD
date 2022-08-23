@@ -19,7 +19,7 @@
 
 load("//bazel:build_defs.bzl", "pybind11_extension")
 
-licenses(["notice"])  # Apache 2.0 License
+licenses(["notice"])
 
 pybind11_extension(
     name = "_defaults",
