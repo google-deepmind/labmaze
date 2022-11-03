@@ -27,7 +27,7 @@ import sysconfig
 import setuptools
 from setuptools.command import build_ext
 
-__version__ = '1.0.5'
+__version__ = '1.0.6'
 
 PROJECT_NAME = 'labmaze'
 
