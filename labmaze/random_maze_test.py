@@ -255,44 +255,44 @@ class RandomMazeTest(absltest.TestCase):
     self.assertIn(str(maze.entity_layer), expected_mazes_2)
 
   def testInvalidArguments(self):
-    with self.assertRaisesRegexp(ValueError, 'height.*integer'):
+    with self.assertRaisesRegex(ValueError, 'height.*integer'):
       labmaze.RandomMaze(height=2.5)
-    with self.assertRaisesRegexp(ValueError, 'height.*positive'):
+    with self.assertRaisesRegex(ValueError, 'height.*positive'):
       labmaze.RandomMaze(height=-3)
-    with self.assertRaisesRegexp(ValueError, 'height.*odd'):
+    with self.assertRaisesRegex(ValueError, 'height.*odd'):
       labmaze.RandomMaze(height=4)
-    with self.assertRaisesRegexp(ValueError, 'width.*integer'):
+    with self.assertRaisesRegex(ValueError, 'width.*integer'):
       labmaze.RandomMaze(width=1.25)
-    with self.assertRaisesRegexp(ValueError, 'width.*positive'):
+    with self.assertRaisesRegex(ValueError, 'width.*positive'):
       labmaze.RandomMaze(width=-5)
-    with self.assertRaisesRegexp(ValueError, 'width.*odd'):
+    with self.assertRaisesRegex(ValueError, 'width.*odd'):
       labmaze.RandomMaze(width=2)
-    with self.assertRaisesRegexp(ValueError, 'room_min_size.*integer'):
+    with self.assertRaisesRegex(ValueError, 'room_min_size.*integer'):
       labmaze.RandomMaze(room_min_size=3.3)
-    with self.assertRaisesRegexp(ValueError, 'room_min_size.*positive'):
+    with self.assertRaisesRegex(ValueError, 'room_min_size.*positive'):
       labmaze.RandomMaze(room_min_size=-1)
-    with self.assertRaisesRegexp(ValueError, 'room_max_size.*integer'):
+    with self.assertRaisesRegex(ValueError, 'room_max_size.*integer'):
       labmaze.RandomMaze(room_max_size=4.4)
-    with self.assertRaisesRegexp(ValueError, 'room_max_size.*positive'):
+    with self.assertRaisesRegex(ValueError, 'room_max_size.*positive'):
       labmaze.RandomMaze(room_max_size=-2)
-    with self.assertRaisesRegexp(
+    with self.assertRaisesRegex(
         ValueError, 'room_min_size.*less than or equal to.*room_max_size'):
       labmaze.RandomMaze(room_min_size=4, room_max_size=3)
-    with self.assertRaisesRegexp(ValueError, 'retry_count.*integer'):
+    with self.assertRaisesRegex(ValueError, 'retry_count.*integer'):
       labmaze.RandomMaze(retry_count=5.4)
-    with self.assertRaisesRegexp(ValueError, 'retry_count.*positive'):
+    with self.assertRaisesRegex(ValueError, 'retry_count.*positive'):
       labmaze.RandomMaze(retry_count=-7)
-    with self.assertRaisesRegexp(
+    with self.assertRaisesRegex(
         ValueError, 'extra_connection_probability.*between 0.0 and 1.0'):
       labmaze.RandomMaze(extra_connection_probability=1.1)
-    with self.assertRaisesRegexp(ValueError, 'max_variations.*integer'):
+    with self.assertRaisesRegex(ValueError, 'max_variations.*integer'):
       labmaze.RandomMaze(max_variations=6.7)
-    with self.assertRaisesRegexp(
+    with self.assertRaisesRegex(
         ValueError, 'max_variations.*between 0 and 26'):
       labmaze.RandomMaze(max_variations=27)
-    with self.assertRaisesRegexp(ValueError, 'spawn_token.*single character'):
+    with self.assertRaisesRegex(ValueError, 'spawn_token.*single character'):
       labmaze.RandomMaze(spawn_token='foo')
-    with self.assertRaisesRegexp(ValueError, 'object_token.*single character'):
+    with self.assertRaisesRegex(ValueError, 'object_token.*single character'):
       labmaze.RandomMaze(object_token='bar')
 
 if __name__ == '__main__':
